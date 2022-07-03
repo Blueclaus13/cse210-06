@@ -8,11 +8,13 @@ from game.shared.color import Color
 from game.shared.point import Point
 from game.directing.director import Director
 from game.casting.cast import Cast
+from game.casting.score import Score
 
 def main():
 
     # create the cast
     cast = Cast()
+    cast.add_actor("scores", Score())
 
      # start the game
     keyboard_service = KeyboardService()
