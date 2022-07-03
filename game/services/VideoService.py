@@ -7,7 +7,7 @@ class VideoService:
     on the screen. 
     """
 
-    def __init__(self, debug = False):
+    def __init__(self, debug = True):
         """Constructs a new VideoService using the specified debug mode.
         
         Args:
