@@ -1,4 +1,4 @@
-from constants import FONT_SIZE, GREEN, RED
+from constants import FONT_SIZE, GREEN, MAX_X, MAX_Y, RED
 from game.services.keyboardService import KeyboardService
 from game.services.VideoService import VideoService
 from game.scripting.script import Script
