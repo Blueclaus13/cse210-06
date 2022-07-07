@@ -30,13 +30,26 @@ class ControlActorsAction(Action):
             script (Script): The script of Actions in the game.
         """
         
-        # up
+        # up_player1
         if self._keyboard_service.is_key_down('w'):
             self._direction = Point(0, -constants.CELL_SIZE)
+            paddle1 = cast.get_first_actor("paddles1")
         
-        # down
+        # down_player1
         if self._keyboard_service.is_key_down('s'):
             self._direction = Point(0, constants.CELL_SIZE)
+            paddle1 = cast.get_first_actor("paddles1")
+
+
+        # up_player2
+        if self._keyboard_service.is_key_down('i'):
+            self._direction = Point(0, -constants.CELL_SIZE)
+            paddle2 = cast.get_first_actor("paddles2")
         
-        #snake = cast.get_first_actor("snakes")
-        #snake.turn_head(self._direction)
+        # down_player2
+        if self._keyboard_service.is_key_down('k'):
+            self._direction = Point(0, constants.CELL_SIZE)
+            paddle2 = cast.get_first_actor("paddles2")
+
+
+    
