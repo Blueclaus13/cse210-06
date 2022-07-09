@@ -16,6 +16,11 @@ from game.casting.ball import Ball
 
 def main():
 
+    #colors?
+
+    BLACK = (0,0,0)
+    WHITE = (255, 255, 255)
+
     # create the cast
     cast = Cast()
     cast.add_actor("scores", Score())

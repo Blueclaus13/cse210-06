@@ -1,6 +1,7 @@
 import pygame
 from random import randint
 from game.shared.color import Color
+BLACK = (0,0,0)
 
 class Ball(pygame.sprite.Sprite):
     #class that represents the ball
@@ -11,8 +12,8 @@ class Ball(pygame.sprite.Sprite):
         #set the color and other attributes of the ball
 
         self.image = pygame.Surface([width, height])
-        self.image.fill(self._blue)
-        self.image.set_colorkey(self._black)
+        self.image.fill(BLACK)
+        self.image.set_colorkey(BLACK)
 
         #draw ball
         pygame.draw.rect(self.image, color, [0, 0, width, height])
