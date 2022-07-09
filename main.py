@@ -1,4 +1,5 @@
-from constants import FONT_SIZE, GREEN, MAX_X, MAX_Y, RED
+from constants import FONT_SIZE, GREEN, MAX_X, MAX_Y, RED, WHITE
+import pygame
 from game.services.keyboardService import KeyboardService
 from game.services.VideoService import VideoService
 from game.scripting.script import Script
@@ -11,6 +12,7 @@ from game.directing.director import Director
 from game.casting.cast import Cast
 from game.casting.score import Score
 from game.casting.actor import Actor
+from game.casting.ball import Ball
 
 def main():
 
@@ -43,6 +45,25 @@ def main():
     paddle2.set_color(GREEN)
     paddle2.set_position(position2)
     cast.add_actor("paddles2", paddle2)
+
+    #create ball
+    ball = Ball(WHITE,10,10)
+    ball.rect.x = 670
+    ball.rect.y = 195
+
+    #see if ball is hitting a wall
+    if ball.rect.x >= 690:
+        ball.velocity[0] = -ball.velocity[0]
+    if ball.rect.x <=0:
+        ball.velocity[0] = -ball.velocity[0]
+    if ball.rect.y > 490:
+        ball.velocity[1] = -ball.velocity[1]
+    if ball.rect.y < 0:
+        ball.velocity[1] = -ball.velocity[1]
+
+    #check for ball collision with paddle
+    if pygame.sprite.collide_mask(ball, paddle1) or pygame.sprite.collide_mask(ball, paddle2):
+        ball.bounce()
 
 
 
