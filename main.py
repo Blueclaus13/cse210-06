@@ -1,4 +1,4 @@
-from constants import FONT_SIZE, GREEN, MAX_X, MAX_Y, RED, WHITE
+from constants import FONT_SIZE, GREEN, RED
 import pygame
 from game import Game
 from game.services.keyboardService import KeyboardService

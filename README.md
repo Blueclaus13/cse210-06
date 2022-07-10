@@ -3,9 +3,10 @@ Try out the first commercailly successful video game that started them all. Pong
 
 ## Getting Started
 ---
-Make sure you have Python 3.8.0 or newer and Raylib Python CFFI 3.7 installed and running on your machine. You can install Raylib Python CFFI by opening a terminal and running the following command.
+Make sure you have Python 3.8.0 or newer and Raylib Python CFFI 3.7 installed and running on your machine. You can install Raylib Python CFFI by opening a terminal and running the following commands.
 ```
 python3 -m pip install raylib
+py -m pip install pygame
 ```
 After you've installed the required libraries, open a terminal and browse to the project's root folder. Start the program by running the following command.```
 
