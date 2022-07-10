@@ -1,5 +1,6 @@
 from constants import FONT_SIZE, GREEN, MAX_X, MAX_Y, RED, WHITE
 import pygame
+from game import Game
 from game.services.keyboardService import KeyboardService
 from game.services.VideoService import VideoService
 from game.scripting.script import Script
@@ -89,3 +90,9 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+g = Game()
+
+while g.running:
+    g.curr_menu.display_menu()
+    g.game_loop()
